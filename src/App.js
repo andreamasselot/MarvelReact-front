@@ -2,7 +2,7 @@ import "./assets/fonts/stylesheet.css";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Personnages from "./pages/Personnages";
+import Characters from "./pages/Characters";
 import Header from "./components/Header";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<Personnages />} />
+        <Route path="/" element={<Characters />} />
       </Routes>
     </Router>
   );
