@@ -8,6 +8,13 @@
   padding: 5px;
   height: 100vh;
 }
+a {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  color: #c0c0c0;
+  font-size: 30px;
+  font-weight: 400;
+}
 p {
   font-family: "Roboto", sans-serif;
   color: whitesmoke;

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import logo from "../assets/img/Marvel-logo.png";
 const Header = () => {
   return (
@@ -7,9 +9,9 @@ const Header = () => {
           <img src={logo} alt="logo marvel" />
         </div>
         <nav className="menu">
-          <button>Personnages</button>
-          <button>Comics</button>
-          <button>Favoris</button>
+          <Link to={"/"}>PERSONNAGES </Link>
+          <Link to={"/"}>COMICS </Link>
+          <Link to={"/"}>FAVORIS </Link>
         </nav>
       </header>
     </>
