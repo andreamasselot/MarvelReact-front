@@ -10,7 +10,7 @@ const Characters = (props) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/characters?name=${props.search}`
+          `https://site--marvel--fhdp7f7ffy5p.code.run/characters?name=${props.search}`
         );
         console.log(response.data);
         setData(response.data);
