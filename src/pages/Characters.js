@@ -28,9 +28,11 @@ const Characters = () => {
           {data.results.map((character) => {
             return (
               <Card
+                key={character._id}
                 name={character.name}
                 description={character.description}
                 image={`${character.thumbnail.path}.${character.thumbnail.extension}`}
+                link={`/comics/${character._id}`}
               />
             );
           })}

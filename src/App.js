@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Characters from "./pages/Characters";
 import Header from "./components/Header";
+import Comics from "./pages/Comics";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Characters />} />
+        <Route path="/comics" element={<Comics />} />
       </Routes>
     </Router>
   );

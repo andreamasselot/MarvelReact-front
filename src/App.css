@@ -1,6 +1,10 @@
 #root {
   font-family: "Roboto", sans-serif;
   background-color: #050301;
+  min-height: 100vh;
+}
+body {
+  background-color: #050301;
 }
 .container {
   max-width: 1300px;
@@ -75,6 +79,7 @@ nav {
   background-color: rgba(39, 37, 66, 0.7);
   border: none;
   font-size: 20px;
+  border-radius: 2px;
 }
 .hero-images {
   width: 100%;
