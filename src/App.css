@@ -87,6 +87,16 @@ nav {
   object-fit: cover;
   border-radius: 20px;
 }
+.heart-plus-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #f9f6e8;
+  background-color: rgba(5, 3, 1, 0.9);
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 20px;
+}
 .heroes-container {
   display: flex;
   flex-direction: column;
@@ -108,6 +118,7 @@ nav {
 figure {
   width: 240px;
   height: 290px;
+  position: relative;
 }
 
 .card-container {
@@ -155,4 +166,14 @@ figure {
 }
 .details-id {
   width: 50%;
+}
+.details-id button {
+  background-color: #050301;
+  border: none;
+  color: #016db5;
+  border-bottom: #016db5 solid 1px;
+  font-size: 18px;
+  font-family: "Open Sans";
+  padding: 3px;
+  margin-top: 20px;
 }

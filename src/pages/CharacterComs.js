@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Card from "../components/Card";
 
@@ -39,6 +40,9 @@ const CharacterComs = () => {
         <div className="details-id">
           <h2>{data.name}</h2>
           <p>{data.description}</p>
+          <button>
+            <FontAwesomeIcon icon="plus" /> Add to Favorites
+          </button>
         </div>
       </section>
       <div className="container">

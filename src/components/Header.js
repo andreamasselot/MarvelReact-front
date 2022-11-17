@@ -6,12 +6,15 @@ const Header = () => {
     <>
       <header>
         <div className="logo">
-          <img src={logo} alt="logo marvel" />
+          <Link to={"/"}>
+            {" "}
+            <img src={logo} alt="logo marvel" />
+          </Link>
         </div>
         <div className="banner"></div>
         <div className="bottom-nav">
           <nav className="menu">
-            <Link to={"/"}>Characters </Link>
+            <Link to={"/"}>Characters</Link>
             <Link to={"/comics"}>Comics </Link>
             <Link to={"/"}>Favorites </Link>
           </nav>

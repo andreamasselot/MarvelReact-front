@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Card = (props) => {
   return (
@@ -7,6 +8,10 @@ const Card = (props) => {
         {props.link ? (
           <Link to={props.link}>
             <figure>
+              <FontAwesomeIcon
+                className="heart-plus-icon"
+                icon="heart-circle-plus"
+              />
               <img
                 className="hero-images"
                 src={props.image}
@@ -17,6 +22,10 @@ const Card = (props) => {
         ) : (
           <figure>
             <img className="hero-images" src={props.image} alt="hero images" />
+            <FontAwesomeIcon
+              className="heart-plus-icon"
+              icon="heart-circle-plus"
+            />
           </figure>
         )}
 
