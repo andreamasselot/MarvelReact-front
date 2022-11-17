@@ -2,14 +2,16 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Card from "../components/Card";
 
-const Comics = () => {
+const Comics = (props) => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/comics`);
+        const response = await axios.get(
+          `http://localhost:4000/comics?title=${props.search}`
+        );
         console.log(response.data);
         setData(response.data);
         setIsLoading(false);
@@ -18,7 +20,7 @@ const Comics = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [props.search]);
   return isLoading ? (
     <p>Loading...</p>
   ) : (

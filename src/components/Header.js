@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 
 import logo from "../assets/img/Marvel-logo.png";
-const Header = () => {
+const Header = (props) => {
+  const handleSearch = (event) => {
+    const value = event.target.value;
+    props.setSearch(value);
+  };
   return (
     <>
       <header>
@@ -14,11 +18,30 @@ const Header = () => {
         <div className="banner"></div>
         <div className="bottom-nav">
           <nav className="menu">
-            <Link to={"/"}>Characters</Link>
-            <Link to={"/comics"}>Comics </Link>
+            <Link
+              to={"/"}
+              onClick={() => {
+                props.setSearch("");
+              }}
+            >
+              Characters
+            </Link>
+            <Link
+              to={"/comics"}
+              onClick={() => {
+                props.setSearch("");
+              }}
+            >
+              Comics{" "}
+            </Link>
             <Link to={"/"}>Favorites </Link>
           </nav>
-          <input type="text" placeholder="Search" />
+          <input
+            type="text"
+            placeholder="Search"
+            value={props.search}
+            onChange={handleSearch}
+          />
         </div>
       </header>
     </>
