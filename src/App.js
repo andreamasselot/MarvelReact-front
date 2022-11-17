@@ -15,8 +15,17 @@ import {
   faHeart,
   faMagnifyingGlass,
   faPlus,
+  faArrowLeft,
+  faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
-library.add(faHeartCirclePlus, faHeart, faMagnifyingGlass, faPlus);
+library.add(
+  faHeartCirclePlus,
+  faHeart,
+  faMagnifyingGlass,
+  faPlus,
+  faArrowLeft,
+  faArrowRight
+);
 
 function App() {
   const [search, setSearch] = useState("");

@@ -1,16 +1,20 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
+import Pagination from "../components/Pagination";
 import Card from "../components/Card";
+
 const Characters = (props) => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  const [counter, setCounter] = useState(1);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
+        const skip = counter * 100 - 100;
         const response = await axios.get(
-          `https://site--marvel--fhdp7f7ffy5p.code.run/characters?name=${props.search}`
+          `https://site--marvel--fhdp7f7ffy5p.code.run/characters?name=${props.search}&skip=${skip}`
         );
         console.log(response.data);
         setData(response.data);
@@ -20,12 +24,15 @@ const Characters = (props) => {
       }
     };
     fetchData();
-  }, [props.search]);
+  }, [props.search, counter]);
   return isLoading ? (
     <p>Loading...</p>
   ) : (
     <>
       <div className="container">
+        <div className="pagination">
+          <Pagination counter={counter} setCounter={setCounter} />
+        </div>
         <div className="card-container">
           {data.results.map((character) => {
             return (
@@ -38,6 +45,9 @@ const Characters = (props) => {
               />
             );
           })}
+        </div>
+        <div className="pagination">
+          <Pagination counter={counter} setCounter={setCounter} />
         </div>
       </div>
     </>
