@@ -117,3 +117,42 @@ figure {
   justify-content: center;
   align-items: baseline;
 }
+.comics-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 50px;
+}
+.heroes-identity {
+  display: flex;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.heroes-identity h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.heroes-identity p {
+  font-size: 18px;
+  line-height: 130%;
+  text-align: justify;
+}
+.id-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.id-picture img {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  border: #911f1f 5px solid;
+  object-fit: cover;
+}
+.details-id {
+  width: 50%;
+}
