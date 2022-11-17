@@ -25,12 +25,12 @@ const Characters = () => {
     <>
       <div className="container">
         <div className="card-container">
-          {data.results.map((elem) => {
+          {data.results.map((character) => {
             return (
               <Card
-                name={elem.name}
-                description={elem.description}
-                image={`${elem.thumbnail.path}.${elem.thumbnail.extension}`}
+                name={character.name}
+                description={character.description}
+                image={`${character.thumbnail.path}.${character.thumbnail.extension}`}
               />
             );
           })}

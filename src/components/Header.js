@@ -8,11 +8,15 @@ const Header = () => {
         <div className="logo">
           <img src={logo} alt="logo marvel" />
         </div>
-        <nav className="menu">
-          <Link to={"/"}>Characters </Link>
-          <Link to={"/"}>Comics </Link>
-          <Link to={"/"}>Favorites </Link>
-        </nav>
+        <div className="banner"></div>
+        <div className="bottom-nav">
+          <nav className="menu">
+            <Link to={"/"}>Characters </Link>
+            <Link to={"/"}>Comics </Link>
+            <Link to={"/"}>Favorites </Link>
+          </nav>
+          <input type="text" placeholder="Search" />
+        </div>
       </header>
     </>
   );
