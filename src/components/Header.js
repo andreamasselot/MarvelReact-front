@@ -25,6 +25,7 @@ const Header = (props) => {
               }}
             >
               Characters
+              <div class="bar"></div>
             </Link>
             <Link
               to={"/comics"}
