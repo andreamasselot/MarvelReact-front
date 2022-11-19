@@ -13,7 +13,7 @@ const Favorites = (props) => {
     <>
       <div className="fav-container">
         <section className="favorites-section ">
-          <h1 className="hero-title">Favorite Characters </h1>
+          <h1>Favorite Characters</h1>
           {heroes.map((elem) => {
             return (
               <>
@@ -39,7 +39,7 @@ const Favorites = (props) => {
           })}
         </section>
         <section className="favorites-section">
-          <h1 className="comics-title">Favorite Comics </h1>
+          <h1>Favorite Comics</h1>
 
           {comics.map((elem) => {
             return (
