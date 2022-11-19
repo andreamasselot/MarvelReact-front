@@ -38,10 +38,13 @@ const Characters = (props) => {
             return (
               <Card
                 key={character._id}
+                id={character._id}
                 name={character.name}
                 description={character.description}
                 image={`${character.thumbnail.path}.${character.thumbnail.extension}`}
                 link={`/comics/${character._id}`}
+                handleFavorites={props.handleFavorites}
+                type="heroes"
               />
             );
           })}

@@ -11,7 +11,7 @@ const Pagination = (page) => {
             }
           }}
         >
-          <FontAwesomeIcon icon="arrow-left" />
+          <FontAwesomeIcon icon="arrow-left" className="arrow" />
         </p>
       ) : (
         <div className="empty-div"></div>
@@ -23,7 +23,7 @@ const Pagination = (page) => {
           page.setCounter(page.counter + 1);
         }}
       >
-        <FontAwesomeIcon icon="arrow-right" />
+        <FontAwesomeIcon icon="arrow-right" className="arrow" />
       </p>
     </>
   );

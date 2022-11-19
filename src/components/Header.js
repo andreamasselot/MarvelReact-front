@@ -9,12 +9,19 @@ const Header = (props) => {
   return (
     <>
       <header>
-        <div className="logo">
-          <Link to={"/"}>
-            {" "}
-            <img src={logo} alt="logo marvel" />
-          </Link>
+        <div className="connexion">
+          <div className="logo">
+            <Link to={"/"}>
+              <img src={logo} alt="logo marvel" />
+            </Link>
+          </div>
+          <div className={"connexion-links"}>
+            <button>SIGN UP</button>
+
+            <button> LOGIN</button>
+          </div>
         </div>
+
         <div className="banner"></div>
         <div className="bottom-nav">
           <nav className="menu">
@@ -25,7 +32,6 @@ const Header = (props) => {
               }}
             >
               Characters
-              <div class="bar"></div>
             </Link>
             <Link
               to={"/comics"}
@@ -33,9 +39,10 @@ const Header = (props) => {
                 props.setSearch("");
               }}
             >
-              Comics{" "}
+              Comics
             </Link>
-            <Link to={"/"}>Favorites </Link>
+
+            <Link to={"/favorites"}>Favorites </Link>
           </nav>
           <input
             type="text"

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Card from "../components/Card";
 
-const CharacterComs = () => {
+const CharacterComs = (props) => {
   const { characterId } = useParams();
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
@@ -30,7 +30,7 @@ const CharacterComs = () => {
     <p>Loading...</p>
   ) : (
     <>
-      <section className="heroes-identity">
+      <section className="heroes-identity container ">
         <figure className="id-picture">
           <img
             src={`${data.thumbnail.path}.${data.thumbnail.extension}`}
@@ -40,7 +40,16 @@ const CharacterComs = () => {
         <div className="details-id">
           <h2>{data.name}</h2>
           <p>{data.description}</p>
-          <button>
+          <button
+            onClick={(event) => {
+              props.handleFavorites({
+                image: `${data.thumbnail.path}.${data.thumbnail.extension}`,
+                name: data.name,
+                type: "heroes",
+                id: data._id,
+              });
+            }}
+          >
             <FontAwesomeIcon icon="plus" /> Add to Favorites
           </button>
         </div>
@@ -51,9 +60,12 @@ const CharacterComs = () => {
             return (
               <Card
                 key={elem._id}
+                id={elem._id}
                 name={elem.title}
                 description={elem.description}
                 image={`${elem.thumbnail.path}.${elem.thumbnail.extension}`}
+                handleFavorites={props.handleFavorites}
+                type="comics"
               />
             );
           })}

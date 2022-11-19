@@ -37,9 +37,12 @@ const Comics = (props) => {
             return (
               <Card
                 key={comics._id}
+                id={comics._id}
                 name={comics.title}
                 description={comics.description}
                 image={`${comics.thumbnail.path}.${comics.thumbnail.extension}`}
+                handleFavorites={props.handleFavorites}
+                type="comics"
               />
             );
           })}
