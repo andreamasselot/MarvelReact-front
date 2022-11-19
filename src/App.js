@@ -32,13 +32,29 @@ library.add(
 );
 
 function App() {
+  const cookie = Cookies.get("favCookies");
+  const newCookie = JSON.parse(cookie);
+  console.log(newCookie);
+
   const [search, setSearch] = useState("");
-  const [favorites, setFavorites] = useState([]);
+  const [favorites, setFavorites] = useState(newCookie);
 
   const handleFavorites = (fav) => {
-    const newFavorite = [...favorites];
-    newFavorite.push(fav);
-    setFavorites(newFavorite);
+    const favExist = favorites.find((f) => {
+      return fav.id === f.id;
+    });
+    if (!favExist) {
+      const newFavorite = [...favorites];
+      newFavorite.push(fav);
+      setFavorites(newFavorite);
+      Cookies.set("favCookies", JSON.stringify(newFavorite), { expires: 30 });
+    } else {
+      const newFavorite = favorites.filter((f) => {
+        return fav.id !== f.id;
+      });
+      setFavorites(newFavorite);
+      Cookies.set("favCookies", JSON.stringify(newFavorite), { expires: 30 });
+    }
   };
 
   return (
