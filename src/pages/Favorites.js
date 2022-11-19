@@ -11,29 +11,60 @@ const Favorites = (props) => {
   }
   return (
     <>
-      <div>
-        {heroes.map((elem) => {
-          return (
-            <>
-              <section className="container ">
-                <h2>{elem.name}</h2>
-                <img src={elem.image} alt="marvel images" />
-                <button>Remove</button>
-              </section>
-            </>
-          );
-        })}
-        {comics.map((elem) => {
-          return (
-            <>
-              <section className="container">
-                <h2>{elem.name}</h2>
-                <img src={elem.image} alt="marvel images" />
-                <button>Remove</button>
-              </section>
-            </>
-          );
-        })}
+      <div className="fav-container">
+        <section className="favorites-section ">
+          <h1 className="hero-title">Favorite Characters </h1>
+          {heroes.map((elem) => {
+            return (
+              <>
+                <div className="fav-div">
+                  <img
+                    src={elem.image}
+                    alt="marvel images"
+                    className="fav-images blue"
+                  />
+                  <h2>{elem.name}</h2>
+
+                  <button
+                    onClick={(event) => {
+                      event.preventDefault();
+                      props.handleFavorites(elem);
+                    }}
+                  >
+                    Remove
+                  </button>
+                </div>
+              </>
+            );
+          })}
+        </section>
+        <section className="favorites-section">
+          <h1 className="comics-title">Favorite Comics </h1>
+
+          {comics.map((elem) => {
+            return (
+              <>
+                <div className="fav-div">
+                  <img
+                    src={elem.image}
+                    alt="marvel images"
+                    className="fav-images purple"
+                  />
+                  <h2>{elem.name}</h2>
+
+                  <button
+                    onClick={(event) => {
+                      event.preventDefault();
+                      props.handleFavorites(elem);
+                    }}
+                  >
+                    Remove
+                  </button>
+                </div>
+              </>
+            );
+          })}
+        </section>
       </div>
     </>
   );

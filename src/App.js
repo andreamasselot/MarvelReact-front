@@ -32,9 +32,8 @@ library.add(
 );
 
 function App() {
-  const cookie = Cookies.get("favCookies");
+  const cookie = Cookies.get("favCookies") || "[]";
   const newCookie = JSON.parse(cookie);
-  console.log(newCookie);
 
   const [search, setSearch] = useState("");
   const [favorites, setFavorites] = useState(newCookie);
