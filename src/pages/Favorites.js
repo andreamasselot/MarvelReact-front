@@ -23,6 +23,7 @@ const Favorites = (props) => {
                     alt="marvel images"
                     className="fav-images blue"
                   />
+
                   <h2>{elem.name}</h2>
 
                   <button
@@ -50,6 +51,7 @@ const Favorites = (props) => {
                     alt="marvel images"
                     className="fav-images purple"
                   />
+
                   <h2>{elem.name}</h2>
 
                   <button

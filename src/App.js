@@ -12,6 +12,8 @@ import CharacterComs from "./pages/CharacterComs";
 import Favorites from "./pages/Favorites";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
+import { Toaster } from "react-hot-toast";
+import { toast } from "react-hot-toast";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -47,17 +49,24 @@ function App() {
       newFavorite.push(fav);
       setFavorites(newFavorite);
       Cookies.set("favCookies", JSON.stringify(newFavorite), { expires: 30 });
+      toast.success("Successfully added to favorites!");
     } else {
       const newFavorite = favorites.filter((f) => {
         return fav.id !== f.id;
       });
       setFavorites(newFavorite);
       Cookies.set("favCookies", JSON.stringify(newFavorite), { expires: 30 });
+      toast("Successfully removed from favorites!", {
+        icon: "🗑",
+      });
     }
   };
 
   return (
     <Router>
+      <div>
+        <Toaster />
+      </div>
       <Header search={search} setSearch={setSearch} />
       <Routes>
         <Route
