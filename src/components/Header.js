@@ -16,9 +16,9 @@ const Header = (props) => {
             </Link>
           </div>
           <div className={"connexion-links"}>
-            <button>SIGN UP</button>
+            <Link to={"/signup"}>SIGN UP</Link>
 
-            <button> LOGIN</button>
+            <Link to={"/login"}> LOGIN</Link>
           </div>
         </div>
 

@@ -103,7 +103,7 @@ function App() {
           }
         />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/login" elemnt={<Login />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );
