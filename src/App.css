@@ -380,6 +380,9 @@ form button:hover {
     width: 150px;
     height: 150px;
   }
+  .bottom-nav a {
+    font-size: 25px;
+  }
 }
 @media only screen and (max-width: 600px) {
   header img {
@@ -393,6 +396,7 @@ form button:hover {
 
   .hidden {
     display: block;
+    padding: 5px;
   }
   .connexion {
     display: flex;
@@ -424,5 +428,11 @@ form button:hover {
   .favorites-section h1 {
     border: 1px solid #272542;
     padding: 30px 10px;
+  }
+  .heroes-container p {
+    -webkit-line-clamp: 5;
+  }
+  .signup {
+    width: 90%;
   }
 }
