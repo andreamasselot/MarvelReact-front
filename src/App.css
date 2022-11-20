@@ -417,8 +417,11 @@ form button:hover {
   .bottom-nav input {
     width: 90%;
   }
+  nav {
+    justify-content: center;
+  }
   .bottom-nav a {
-    font-size: 25px;
+    font-size: 22px;
     color: #f9f6e8;
   }
   .fav-container {
