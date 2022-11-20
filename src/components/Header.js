@@ -15,6 +15,11 @@ const Header = (props) => {
               <img src={logo} alt="logo marvel" />
             </Link>
           </div>
+          <div className="hidden">
+            <Link to={"/signup"}>SIGN UP |</Link>
+
+            <Link to={"/login"}> LOGIN</Link>
+          </div>
           <div className={"connexion-links"}>
             <Link to={"/signup"}>SIGN UP</Link>
 

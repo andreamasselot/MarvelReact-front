@@ -3,6 +3,9 @@
   background-color: #050301;
   min-height: 100vh;
 }
+.hidden {
+  display: none;
+}
 
 body {
   background-color: #050301;
@@ -347,4 +350,79 @@ form button:hover {
   border: #f9f6e8 1px solid;
   border-radius: 10px;
   transition: all 0.2s ease;
+}
+@media only screen and (max-width: 900px) {
+  body {
+    background-color: #050301;
+  }
+  .container {
+    max-width: 900px;
+    padding: 20px;
+  }
+  header {
+    max-width: 900px;
+    padding: 20px;
+  }
+  .banner {
+    width: 100%;
+  }
+  .favorites-section {
+    width: 100%;
+    padding: 0px 40px;
+  }
+  .favorites-section h2 {
+    text-align: center;
+  }
+  .fav-div {
+    width: 50%;
+  }
+  .fav-images {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  header img {
+    display: flex;
+    justify-content: center;
+  }
+  header a {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  .hidden {
+    display: block;
+  }
+  .connexion {
+    display: flex;
+  }
+  .connexion-links {
+    display: none;
+  }
+  .banner {
+    display: none;
+  }
+  .bottom-nav {
+    flex-direction: column-reverse;
+    gap: 30px;
+    margin: auto;
+    border-bottom: 2px solid #272542;
+    padding-bottom: 6px;
+  }
+  .bottom-nav input {
+    width: 90%;
+  }
+  .bottom-nav a {
+    font-size: 25px;
+    color: #f9f6e8;
+  }
+  .fav-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .favorites-section h1 {
+    border: 1px solid #272542;
+    padding: 30px 10px;
+  }
 }
