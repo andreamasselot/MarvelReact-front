@@ -12,6 +12,7 @@ import CharacterComs from "./pages/CharacterComs";
 import Favorites from "./pages/Favorites";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
+import Footer from "./components/Footer";
 import { Toaster } from "react-hot-toast";
 import { toast } from "react-hot-toast";
 
@@ -105,6 +106,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
