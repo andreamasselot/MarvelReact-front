@@ -419,6 +419,8 @@ form button:hover {
   }
   nav {
     justify-content: center;
+    margin: auto;
+    width: 100%;
   }
   .bottom-nav a {
     font-size: 22px;
